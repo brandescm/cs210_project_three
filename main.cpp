@@ -1,6 +1,6 @@
-#include <Python.h>
+#include "Python.h"
 #include <iostream>
-#include <Windows.h>
+// #include <Windows.h>
 #include <cmath>
 #include <string>
 
@@ -19,7 +19,7 @@ Return:
 void CallProcedure(string pName)
 {
 	char *procname = new char[pName.length() + 1];
-	std::strcpy(procname, pName.c_str());
+	strcpy(procname, pName.c_str());
 
 	Py_Initialize();
 	PyObject* my_module = PyImport_ImportModule("PythonCode");
@@ -45,10 +45,10 @@ Return:
 int callIntFunc(string proc, string param)
 {
 	char *procname = new char[proc.length() + 1];
-	std::strcpy(procname, proc.c_str());
+	strcpy(procname, proc.c_str());
 
 	char *paramval = new char[param.length() + 1];
-	std::strcpy(paramval, param.c_str());
+	strcpy(paramval, param.c_str());
 
 
 	PyObject *pName, *pModule, *pDict, *pFunc, *pValue = nullptr, *presult = nullptr;
@@ -100,7 +100,7 @@ Return:
 int callIntFunc(string proc, int param)
 {
 	char *procname = new char[proc.length() + 1];
-	std::strcpy(procname, proc.c_str());
+	strcpy(procname, proc.c_str());
 
 	PyObject *pName, *pModule, *pDict, *pFunc, *pValue = nullptr, *presult = nullptr;
 	// Initialize the Python Interpreter

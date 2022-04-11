@@ -4,12 +4,18 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/include/python3.8/**"
+                "/home/bracor/development/Python-3.10.2/Include/**",
+                "/usr/include/x86_64-linux-gnu/python3.8/**",
+                "/usr/include/linux/**"
             ],
             "defines": [],
             "cStandard": "gnu17",
-            "cppStandard": "gnu++14",
-            "intelliSenseMode": "linux-gcc-x64"
+            "cppStandard": "c++20",
+            "intelliSenseMode": "linux-gcc-x64",
+            "compilerPath": "/usr/bin/g++-9",
+            "compilerArgs": [
+                "-v -H"
+            ]
         }
     ],
     "version": 4
